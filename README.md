@@ -5,7 +5,7 @@ The U-net network consist of a contracting path where the inputs are downsampled
 
 ![alt text](https://github.com/OverFlow7/Ultrasound-Nerve-Segmentation/blob/master/u-net-architecture.png)
 
-A few changes were made from the original design. 
+A few changes were made from the original design.  
 
  * Images were reshaped to 128x128 , a power of 2 for convenience in downsampling/upsampling 
  * Dropout was added after each conv/upconv with p=0.6
@@ -26,3 +26,5 @@ it trained for 55 epochs in about 2 hours and 30 minutes on a Nvidia GTX 960
  * Using bigger size than 128*128 with more features/layers might be better (not enough RAM to test)
  * Some more post-processing to get more realistic masks 
  * Results are a bit inconsistent the score end up being between ~0.695 and ~0.70 , ensembling could prove useful. 
+
+**We made some changes for our Python 3 and TF versions
